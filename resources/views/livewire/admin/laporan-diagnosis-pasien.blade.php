@@ -1,35 +1,13 @@
 <div class="row">
 
     <div class="col-12">
-        <div class="card">
+
+        <div class="card shadow-sm">
             <div class="card-header">
 
-
-                <h4 class="card-title">Laporan Diagnosis Pasien</h4>
-
-
-            </div>
-
-            <div class="card-body">
-
-                <div class="row">
-                    <div class="col">
-
                         <a href="{{ route('laporan-diagnosis-pasien')}}" class="btn btn-outline-danger">Cetak Semua Diagnosis Pasien</a>
-                    </div>
-                    <div class="col">
-
-                    </div>
-                </div>
 
             </div>
-
-        </div>
-    </div>
-
-    <div class="col-12">
-
-        <div class="card">
             <div class="card-body">
                 <div class="table-responsive">
                     <table class="table table-stripped">

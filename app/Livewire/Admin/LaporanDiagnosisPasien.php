@@ -4,9 +4,11 @@ namespace App\Livewire\Admin;
 
 use App\Models\LogDiagnosis;
 use Livewire\Attributes\On;
+use Livewire\Attributes\Title;
 use Livewire\Component;
 use Livewire\WithPagination;
 
+#[Title('Laporan Diagnosis Pasien')]
 class LaporanDiagnosisPasien extends Component
 {
     use WithPagination;
