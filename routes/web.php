@@ -10,14 +10,15 @@ Route::get('/profile', \App\Livewire\Profile::class)->name('profile')->middlewar
 
 Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('/', \App\Livewire\Admin\Dashboard::class)->name('admin.index');
-    Route::get('/dashboard', \App\Livewire\Admin\Dashboard::class)->name('admin.dashboard');
-    Route::get('/penyakit', \App\Livewire\Admin\Penyakit\Index::class)->name('admin.penyakit.index');
-    Route::get('/gejala', \App\Livewire\Gejala\Index::class)->name('admin.gejala.index');
-    Route::get('/rule', \App\Livewire\Rule\Index::class)->name('admin.rule.index');
+    Route::get('/rule', \App\Livewire\Table\RuleTable::class)->name('rule-table');
     Route::get('/gejala-penyakit', \App\Livewire\GejalaPenyakit\Index::class)->name('admin.gejala-penyakit.index');
     Route::get('/laporan-gejala-penyakit', \App\Livewire\Admin\LaporanGejalaPenyakit::class)->name('admin.laporan-gejala-penyakit');
     Route::get('/laporan-diagnosis-pasien', \App\Livewire\Admin\LaporanDiagnosisPasien::class)->name('admin.laporan-diagnosis-pasien');
 });
+
+Route::get('/penyakit', \App\Livewire\Table\PenyakitTable::class)->name('penyakit-table');
+Route::get('/gejala', \App\Livewire\Table\GejalaTable::class)->name('gejala-table');
+Route::get('/dashboard', \App\Livewire\Admin\Dashboard::class)->name('dashboard');
 
 Route::prefix('laporan')->controller(\App\Http\Controllers\LaporanController::class)->group(function () {
 

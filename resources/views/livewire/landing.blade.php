@@ -1,42 +1,43 @@
-<div class="row  justify-content-center align-items-center vh-100">
+<div>
 
-    <div class="col-8 text-center text-white">
+  <!-- Hero Section -->
+<section id="hero" class="hero-section">
+  <div class="hero-content">
+    <h1>Kesehatan Menstruasi Wanita</h1>
+    <p>Temukan wawasan ahli dan solusi untuk masalah kesehatan menstruasi dengan sistem pakar kami yang canggih.</p>
+    <a href="#disorders" class="btn btn-primary">Jelajahi Sekarang</a>
+  </div>
+</section>
 
-                <h1 class="text-white">Selamat Datang</h1>
-                <p>Sistem Pakar penyakti lambung adalah sebuah sistem berbasis komputer yang dirancang untuk meniru
-                    proses berpikir seorang pakar (dokter atau spesialis gastroenterologi) dalam mendiagnosis dan
-                    memberikan saran pengobatan untuk berbagai gangguan atau penyakit yang berhubungan dengan lambung
-                </p>
+  <!-- Disorders Section -->
+<section id="disorders" class="parallax-section disorders-section">
+  <div class="container">
+    <h2>Gangguan Menstruasi yang Umum</h2>
+    <div class="row g-3">
 
-                <a href="{{ route('diagnosis')}}" class="btn btn-primary">Mulai Konsultasi</a>
-    </div>
 
-    <div class="col-12 vh-100 mt-5 " id="daftar-penyakit" style="padding-top: 200px">
+                @foreach ($penyakit as $item)
 
-        <div class="row">
-
-            @foreach ($penyakit as $item)
-
-            <div class="col-4 mt-3">
-
-                <div class="card h-100">
-                    <div class="card-header">
-                        <h3 class="card-title">{{ $item->nama }}</h3>
-                    </div>
-
-                    <div class="card-body">
-                        <p>{{ $item->deskripsi }}</p>
-                    </div>
-                </div>
-
-            </div>
-
-            @endforeach
-
+      <div class="col-md-4 d-flex">
+        <div class="disorder-card w-100 h-100">
+          <h3>{{ $item->nama}}</h3>
+          <p>{{ $item->deskripsi}}</p>
         </div>
+      </div>
+
+                @endforeach
+
 
     </div>
+  </div>
+</section>
 
+  <!-- Contact Section (optional) -->
+  <!-- <section id="contact" class="py-5 text-center bg-light"> -->
+  <!--   <div class="container"> -->
+  <!--     <h2 class="fw-bold mb-3">Contact Us</h2> -->
+  <!--     <p class="text-muted">For consultations and expert support, reach out to our team.</p> -->
+  <!--     <a href="mailto:info@menstrualhealth.com" class="btn btn-primary">Email Us</a> -->
+  <!--   </div> -->
+  <!-- </section> -->
 </div>
-
-
