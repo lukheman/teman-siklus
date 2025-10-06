@@ -154,6 +154,7 @@
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="{{route('landing')}}#hero">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="{{route('landing')}}#disorders">Penyakit</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ route('diagnosis')}}">Diagnosis</a></li>
                   @auth
                       <li class="nav-item"><a class="nav-link" href="{{ route('dashboard')}}">Dashboard</a></li>
 
