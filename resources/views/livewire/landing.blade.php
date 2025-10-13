@@ -3,9 +3,9 @@
   <!-- Hero Section -->
 <section id="hero" class="hero-section">
   <div class="hero-content">
-    <h1>Gangguan Menstruasi Wanita</h1>
-    <p>Temukan wawasan ahli dan solusi untuk gangguan menstruasi dengan sistem pakar kami yang canggih.</p>
-    <a href="#disorders" class="btn btn-primary">Jelajahi Sekarang</a>
+    <h1>Sistem Pakar</h1>
+    <p>sistem pakar gangguan menstruasi adalah sebuah sistem yang di rancang berbasis komputer untuk meniru proses berpikir seorang pakar (Dokter atau Spesialis OBGYN) dalam mendiagnosis dan memberikan saran pengobatan untuk berbagai gangguan atau penyakit yang berhubungan dengan gangguan menstruasi</p>
+    <a href="{{ route('diagnosis')}}" class="btn btn-primary">Mulai Konsul</a>
   </div>
 </section>
 
