@@ -1,5 +1,4 @@
-<div class="d-flex align-items-center justify-content-center vh-100" >
-
+<div class="d-flex align-items-center justify-content-center vh-100">
     <div class="card shadow-lg border-0" style="max-width: 600px; width: 100%;">
         <div class="card-header text-center" style="background-color: #c36b84; color: #fff;">
             <h5 class="mb-0"><b>Pilih Gejala</b></h5>
@@ -7,7 +6,8 @@
 
         <div class="card-body">
             <form>
-                <div class="mb-3">
+                <!-- Daftar gejala scrollable -->
+                <div class="mb-3" style="max-height: 350px; overflow-y: auto; padding-right: 6px;">
                     @foreach ($gejala as $item)
                         <div class="form-check mb-2">
                             <input
@@ -18,7 +18,7 @@
                                 class="form-check-input"
                             >
                             <label for="gejala-{{ $item->id }}" class="form-check-label">
-                                {{ $loop->index+1 . '. ' . $item->nama }}
+                                {{ $loop->iteration }}. {{ $item->nama }}
                             </label>
                         </div>
                     @endforeach
