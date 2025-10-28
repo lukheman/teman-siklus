@@ -48,7 +48,8 @@ class PilihGejala extends Component
 
         $hasil->filterConflict();
 
-        $result = $hasil->sumBeliefByGejala();
+        $result = $hasil;
+
         $this->kode_penyakit = array_keys($result);
         $this->penyakit = Penyakit::whereIn('kode', $this->kode_penyakit)
             ->get()
