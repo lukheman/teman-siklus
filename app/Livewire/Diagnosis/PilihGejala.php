@@ -48,14 +48,14 @@ class PilihGejala extends Component
 
         $hasil->filterConflict();
 
-        $result = $hasil->getMaxValue();
+        $result = $hasil->sumBeliefByGejala();
 
         $this->kode_penyakit = explode(',', array_key_first($result));
 
         $this->penyakit = Penyakit::whereIn('kode', $this->kode_penyakit)
             ->get()
             ->map(function ($item) use ($result) {
-                $item->belief = round(current($result) * 100, 2); // tambahkan field belief ke model
+                $item->belief = round(current($result) * 100, 1); // tambahkan field belief ke model
                 $item->densitas = current($result);
                 return $item;
             })
