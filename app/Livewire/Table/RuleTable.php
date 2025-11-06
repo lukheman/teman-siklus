@@ -31,7 +31,7 @@ class RuleTable extends Component
     public $listGejala;
 
     public function mount() {
-        $this->listGejala = Gejala::latest()->get();
+        $this->listGejala = Gejala::all();
     }
 
     public function save()
